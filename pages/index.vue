@@ -25,11 +25,30 @@
 </template>
 
 <script>
+import { createClient } from '../plugins/contentful'
 import Logo from '~/components/Logo.vue'
+
+const contentfulClient = createClient()
 
 export default {
   components: {
     Logo
+  },
+  asyncData({ env }) {
+    return Promise.all([
+      // fetch all blog posts sorted by creation date
+      contentfulClient.getEntries({
+        content_type: 'page',
+        order: '-sys.createdAt'
+      })
+    ])
+      .then(([pages]) => {
+        console.log(pages)
+        return {
+          pages: pages.items
+        }
+      })
+      .catch(console.error)
   }
 }
 </script>

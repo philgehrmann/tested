@@ -1,3 +1,4 @@
+const config = require('./.contentful.json')
 module.exports = {
   mode: 'spa',
   debug: 'false',
@@ -53,5 +54,10 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  env: {
+    CTF_SPACE_ID: config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
+    CTF_ENVIRONMENT: config.CTF_ENVIRONMENT
   }
 }
