@@ -1,51 +1,52 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        thehub
-      </h1>
-      <h2 class="subtitle">
-        My awesome Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <Header />
+    <ImageSlider />
+    <Welcome />
+    <contentImageTop />
+    <Map />
+    <Footer />
   </div>
 </template>
 
 <script>
 import { createClient } from '../plugins/contentful'
-import Logo from '~/components/Logo.vue'
+import Header from '~/components/Header.vue'
+import Welcome from '~/components/welcome.vue'
+import ImageSlider from '~/components/slider.vue'
+import contentImageTop from '~/components/contentImageTop.vue'
+import Map from '~/components/map.vue'
+import Footer from '~/components/footer.vue'
 
 const contentfulClient = createClient()
 
 export default {
   components: {
-    Logo
+    Header,
+    Welcome,
+    ImageSlider,
+    contentImageTop,
+    Map,
+    Footer
+  },
+  data() {
+    return {
+      pageInformation: Object,
+      title: String
+    }
   },
   asyncData({ env }) {
     return Promise.all([
       // fetch all blog posts sorted by creation date
       contentfulClient.getEntries({
-        content_type: 'page',
+        content_type: 'siteinformation',
         order: '-sys.createdAt'
       })
     ])
-      .then(([pages]) => {
-        console.log(pages)
+      .then(([pageInformation]) => {
+        console.log(pageInformation)
         return {
-          pages: pages.items
+          pageTitle: pageInformation.items
         }
       })
       .catch(console.error)
@@ -53,7 +54,8 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '~/assets/scss/_variables.scss';
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -61,6 +63,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: $color-main;
 }
 
 .title {

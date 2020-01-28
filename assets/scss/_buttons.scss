@@ -1,0 +1,55 @@
+@import '_variables.scss';
+
+.button {
+  padding:0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: 1px solid  $color-black;
+  color:$color-black;
+  text-align: center;
+  font-family: $font-text;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display:inline-flex;
+  @include font-size(0.8);
+  &--center {
+    justify-content: center;
+  }
+  &.white {
+    border: 1px solid $color-white;
+    color: $color-white;
+
+    &:hover {
+      background: $color-white;
+      color: $color-black;
+      transition: all 0.3s ease;
+    }
+  }
+  &.lighter {
+    border: 1px solid  $color-blue;
+    color: $color-white;
+    background: $color-blue;
+
+    &:hover {
+      background: $color-white;
+      color: $color-blue;
+      transition: all 0.3s ease;
+    }
+  }
+  &.lighter-reverse{
+    border: 1px solid  $color-white;
+    color: $color-blue;
+    background: $color-white;
+
+    &:hover {
+      background:  $color-blue;
+      color: $color-white;
+      transition: all 0.3s ease;
+    }
+  }
+  &--container {
+    display:flex;
+    width:100%;
+    justify-content: center;
+  }
+}

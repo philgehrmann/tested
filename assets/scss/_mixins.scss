@@ -1,0 +1,30 @@
+// Mixins
+
+//Font-Size Mixing
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+//MediaQueries
+$tablet-width: 768px;
+$desktop-small-width: 1024px;
+$desktop-big-width: 1300px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (min-width: #{$desktop-small-width}) and (max-width: #{$desktop-big-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-big {
+  @media (min-width: #{$desktop-big-width}) {
+    @content;
+  }
+}

@@ -6,7 +6,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'The Hub | by Kapten & Son', // process.env.npm_package_name ||
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,6 +18,12 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  script: [
+    {
+      src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js',
+      type: 'text/javascript'
+    }
+  ],
   /*
    ** Customize the progress-bar color
    */
@@ -29,13 +35,17 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/vue-parallax',
+    '~/plugins/vue-maps',
+    '~/plugins/vue-instagram'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
     // Doc: https://github.com/nuxt-community/stylelint-module
     // '@nuxtjs/stylelint-module'
   ],
@@ -44,7 +54,7 @@ module.exports = {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
+    // 'bootstrap-vue/nuxt'
   ],
   /*
    ** Build configuration
