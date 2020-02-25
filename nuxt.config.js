@@ -24,6 +24,8 @@ module.exports = {
       type: 'text/javascript'
     }
   ],
+  // where to output built files
+  outputDir: 'dist',
   /*
    ** Customize the progress-bar color
    */
@@ -60,8 +62,8 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
+    publicPath: process.env.PUBLIC_PATH,
+    /*  You can extend webpack config here
      */
     extend(config, ctx) {}
   },

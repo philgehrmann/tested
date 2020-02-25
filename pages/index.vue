@@ -1,11 +1,14 @@
 <template>
   <div>
-    <Header />
+    <!--<Preloader /> -->
+    <Header :navigation="navigation"></Header>
     <ImageSlider />
     <Welcome />
+    <Menu />
     <contentImageTop />
     <Map />
     <Footer />
+    <FooterButtons />
   </div>
 </template>
 
@@ -17,6 +20,9 @@ import ImageSlider from '~/components/slider.vue'
 import contentImageTop from '~/components/contentImageTop.vue'
 import Map from '~/components/map.vue'
 import Footer from '~/components/footer.vue'
+import FooterButtons from '~/components/footerbuttons.vue'
+import Menu from '~/components/menu.vue'
+import Preloader from '~/components/preloader.vue'
 
 const contentfulClient = createClient()
 
@@ -27,7 +33,10 @@ export default {
     ImageSlider,
     contentImageTop,
     Map,
-    Footer
+    Footer,
+    FooterButtons,
+    Menu,
+    Preloader
   },
   data() {
     return {
@@ -35,22 +44,39 @@ export default {
       title: String
     }
   },
-  asyncData({ env }) {
+  head() {
+    return {
+      title: this.title
+    }
+  },
+  asyncData() {
     return Promise.all([
-      // fetch all blog posts sorted by creation date
       contentfulClient.getEntries({
         content_type: 'siteinformation',
         order: '-sys.createdAt'
       })
     ])
-      .then(([pageInformation]) => {
-        console.log(pageInformation)
+      .then((pageInformation) => {
         return {
-          pageTitle: pageInformation.items
+          title: pageInformation[0].items[0].fields.pageTitel
         }
       })
       .catch(console.error)
-  }
+  },
+  asyncData() {
+    return Promise.all([
+      contentfulClient.getEntries({
+        content_type: 'hubNavigation'
+      })
+    ])
+      .then((navigation) => {
+        return {
+          navigation: navigation[0].items
+        }
+      })
+      .catch(console.error)
+  },
+  mounted() {}
 }
 </script>
 

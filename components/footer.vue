@@ -1,5 +1,6 @@
 <template>
   <div class="footer">
+    <logo-liner class="baz"></logo-liner>
     <div class="hub__footer">
       <h2>Öffnungszeiten</h2>
       <div class="hub__footer--item">
@@ -37,9 +38,13 @@
 </template>
 
 <script>
+import LogoLiner from '~/layouts/logoliner.vue'
 export default {
   layout: 'footer',
   name: 'Footer',
+  components: {
+    LogoLiner
+  },
   props: {
     msg: String
   },
@@ -52,10 +57,10 @@ export default {
 @import '~/assets/scss/_globals.scss';
 .footer {
   width: 100%;
-  background: $color-gray;
+  background: $color-main;
   text-align: center;
 
-  color: $color-main;
+  color: $color-white;
 }
 
 .hub {
@@ -66,15 +71,18 @@ export default {
     padding-bottom: 2rem;
     h2 {
       margin-bottom: 1.5rem;
-      @include font-size(1.6);
+      color: $color-white;
+      @include font-size(1.4);
     }
     h3 {
-      @include font-size(1);
+      @include font-size(0.9);
       margin-bottom: 5px;
+      color: $color-white;
     }
     p {
       margin-top: 0;
-      @include font-size(0.9);
+      @include font-size(0.8);
+      color: $color-white;
     }
     &--item {
       margin-bottom: 1.25rem;
@@ -85,7 +93,7 @@ export default {
   }
   &__subfooter {
     width: 100%;
-    background: $color-blue;
+    background: $color-main;
     padding: 1rem 1rem 1rem 1rem;
     display: grid;
     grid-template-rows: 1fr;

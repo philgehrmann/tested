@@ -1,19 +1,24 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500|Oswald:300,400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 //Fonts
-$font-headline: 'Oswald', sans-serif;
+$font-headline: 'Shadows Into Light', cursive;
 $font-text: 'Dosis', sans-serif;
 //Colors:
-$color-main: #293e3d;
-$color-text-primary:  #010e19;
+$color-main: #303030;
+$color-text-primary:  #303030;
+$color-green:#5B9279;
+$color-lightgreen:#8FCB9B;
+$color-graywhite:#EAE6E5;
+$color-brown:#8F8073;
 $color-text-secondary: '';
 $color-white: #fff;
 $color-white-25: rgba(255,255,255,0.25);
 $color-white-50: rgba(255,255,255,0.5);
 $color-white-75: rgba(255,255,255,0.75);
 $color-black: #000;
-$color-blue: #010e19;
+$color-blue: #439961;
 $color-gray: rgb(244, 244, 244);
 $color-darkgray: rgb(38, 38, 38);
 

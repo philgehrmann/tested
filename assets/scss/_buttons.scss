@@ -11,9 +11,11 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   display:inline-flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   @include font-size(0.8);
   &--center {
-    justify-content: center;
+    margin: 0 auto;
   }
   &.white {
     border: 1px solid $color-white;

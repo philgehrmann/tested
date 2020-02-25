@@ -1,9 +1,6 @@
 <template>
-  <div class="hub__map">
+  <div id="maps" class="hub__map">
     <div class="hub__contentImageTop">
-      <div class="hub__contentImageTop--image center">
-        asdasdasdasdasd
-      </div>
       <div class="hub__contentImageTop--text">
         <h2>MAPS</h2>
         <p>
@@ -20,7 +17,6 @@
 
 <script>
 export default {
-  layout: 'contentImageTop',
   name: 'Map',
   props: {
     msg: String

@@ -12,27 +12,23 @@
   display: grid;
   grid-template-columns: 25% 50% 25%;
   height: 55px;
-  border: 0px solid #000;
   position: fixed;
   top: 0;
   z-index: 20;
   transition: all 0.1s ease-out;
   max-width: 2200px;
   margin: 0 auto;
-  background: rgba(0, 0, 0, 1);
+  background: #303030;
 
   &-logo {
     text-align: center;
-    background: black;
-    border-radius: 58%;
     align-self: center;
-    margin-top: -14px;
+    margin-top: 10px;
     width: 139px;
-    padding-top: 19px;
-    height: 88px;
+    height: 50px;
     justify-self: center;
     img {
-      width: 60%;
+      width: 40%;
     }
     a {
       color: $color-white;

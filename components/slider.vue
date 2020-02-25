@@ -1,5 +1,8 @@
 <template>
   <div class="hub__main-slider">
+    <div v-parallax="0.2" class="text__content">
+      <img src="~/assets/images/logo_white.svg" />
+    </div>
     <slick
       ref="slick"
       :options="slickOptions"
@@ -15,81 +18,81 @@
       @lazyLoaded="handleLazyLoaded"
       @lazyLoadError="handleLazeLoadError"
     >
-      <picture>
+      <picture v-parallax="0.1">
         <source
-          srcset="https://picsum.photos/1200/1200?random=2"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="https://picsum.photos/1250/600?random=2"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="https://picsum.photos/1024/450?random=2"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="https://picsum.photos/768/768?random=2"
+          srcset="~/assets/images/mainimage.jpg"
           media="(max-width: 768px)"
         />
-        <img src="https://picsum.photos/id/1015/1300/1000" alt="MDN" />
+        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
       </picture>
       <picture>
         <source
-          srcset="https://picsum.photos/1200/1200?random=2"
+          srcset="~/assets/images/image_teaser-2.webp"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="https://picsum.photos/1250/600?random=2"
+          srcset="~/assets/images/image_teaser-2.webp"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="https://picsum.photos/1024/450?random=2"
+          srcset="~/assets/images/image_teaser-2.webp"
           media="(min-width: 768px)"
         />
         <source
-          srcset="https://picsum.photos/768/768?random=2"
+          srcset="~/assets/images/image_teaser-2.webp"
           media="(max-width: 768px)"
         />
-        <img src="https://picsum.photos/id/1015/1300/1000" alt="MDN" />
+        <img src="~/assets/images/image_teaser-2.webp" alt="MDN" />
       </picture>
       <picture>
         <source
-          srcset="https://picsum.photos/1200/1200?random=3"
+          srcset="~/assets/images/image_teaser-3.webp"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="https://picsum.photos/1250/600?random=3"
+          srcset="~/assets/images/image_teaser-3.webp"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="https://picsum.photos/1024/450?random=3"
+          srcset="~/assets/images/image_teaser-3.webp"
           media="(min-width: 768px)"
         />
         <source
-          srcset="https://picsum.photos/768/768?random=3"
+          srcset="~/assets/images/image_teaser-3.webp"
           media="(max-width: 768px)"
         />
-        <img src="https://picsum.photos/id/1015/1300/1000" alt="MDN" />
+        <img src="~/assets/images/image_teaser-3.webp" alt="MDN" />
       </picture>
       <picture>
         <source
-          srcset="https://picsum.photos/1200/1200?random=4"
+          srcset="~/assets/images/image_teaser-4.webp"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="https://picsum.photos/1250/600?random=4"
+          srcset="~/assets/images/image_teaser-4.webp"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="https://picsum.photos/1024/450?random=4"
+          srcset="~/assets/images/image_teaser-4.webp"
           media="(min-width: 768px)"
         />
         <source
-          srcset="https://picsum.photos/768/768?random=4"
+          srcset="~/assets/images/image_teaser-4.webp"
           media="(max-width: 768px)"
         />
-        <img src="https://picsum.photos/id/1015/1300/1000" alt="MDN" />
+        <img src="~/assets/images/image_teaser-4.webp" alt="MDN" />
       </picture>
     </slick>
   </div>
@@ -98,7 +101,6 @@
 <script>
 import Slick from 'vue-slick'
 export default {
-  layout: 'slider',
   name: 'ImageSlider',
   components: { Slick },
   props: {
@@ -110,24 +112,27 @@ export default {
         slidesToShow: 1,
         arrows: false,
         dots: true,
+        autplay: false,
         responsive: [
           {
             breakpoint: 1300,
             settings: {
-              slidesToShow: 1
+              slidesToShow: 1,
+              autplay: false
             }
           },
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 1
+              slidesToShow: 1,
+              autplay: false
             }
           },
           {
             breakpoint: 768,
             settings: {
               slidesToShow: 1,
-              autoplay: true
+              autplay: false
             }
           }
         ]
@@ -186,4 +191,50 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '~/assets/scss/_variables.scss';
+@import '~/assets/scss/_mixins.scss';
+@import '~/assets/scss/slick.scss';
+
+.hub {
+  &__main-slider {
+    height: 50%;
+    display: block;
+    overflow: hidden;
+
+    .text__content {
+      position: absolute;
+      top: 35%;
+      z-index: 10;
+      text-align: center;
+      width: 100%;
+      @include tablet {
+          top: 50%;
+      }
+
+      img {
+        width: 60%;
+        height: auto;
+        @include tablet {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+.slick-slider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  background: rgb(65, 181, 178);
+  background: linear-gradient(
+    14deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+</style>
