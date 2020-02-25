@@ -1,10 +1,10 @@
 <template>
   <div class="footer-buttons">
     <div class="footer-buttons--button">
-      <a href="#maps">Find us</a>
+      <a href="#menu">Speisekarte</a>
     </div>
     <div class="footer-buttons--button">
-      <a href="#menu">Speisekarte</a>
+      <a href="#maps">Find us</a>
     </div>
   </div>
 </template>
@@ -31,12 +31,12 @@ export default {
   &--button {
     width: 100%;
     display: block;
-    padding: 1rem;
-
     a {
       font-size: 0.7rem;
       color: $color-white;
       letter-spacing: 3px;
+      padding: 1rem;
+      display: block;
       text-transform: uppercase;
     }
   }

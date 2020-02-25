@@ -37,62 +37,62 @@
         />
         <img src="~/assets/images/mainimage.jpg" alt="MDN" />
       </picture>
-      <picture>
+      <picture v-parallax="0.1">
         <source
-          srcset="~/assets/images/image_teaser-2.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-2.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-2.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-2.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(max-width: 768px)"
         />
-        <img src="~/assets/images/image_teaser-2.webp" alt="MDN" />
+        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
       </picture>
-      <picture>
+      <picture v-parallax="0.1">
         <source
-          srcset="~/assets/images/image_teaser-3.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-3.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-3.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-3.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(max-width: 768px)"
         />
-        <img src="~/assets/images/image_teaser-3.webp" alt="MDN" />
+        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
       </picture>
-      <picture>
+      <picture v-parallax="0.1">
         <source
-          srcset="~/assets/images/image_teaser-4.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-4.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-4.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="~/assets/images/image_teaser-4.webp"
+          srcset="~/assets/images/mainimage.jpg"
           media="(max-width: 768px)"
         />
-        <img src="~/assets/images/image_teaser-4.webp" alt="MDN" />
+        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
       </picture>
     </slick>
   </div>
