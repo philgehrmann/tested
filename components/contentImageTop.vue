@@ -4,22 +4,22 @@
       <div class="hub__contentImageTop--text-in-image">
         <picture>
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-6.jpg"
             media="(min-width: 1300px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-6.jpg"
             media="(min-width: 1024px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-6.jpg"
             media="(min-width: 768px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-6.jpg"
             media="(max-width: 768px)"
           />
-          <img src="~/assets/images/image_teaser-1.webp" alt="MDN" />
+          <img src="~/assets/images/image_teaser-6.jpg" alt="MDN" />
         </picture>
       </div>
       <div class="hub__contentImageTop--text-in-image--text">
@@ -31,7 +31,7 @@
     </div>
     <div class="hub__contentImageTop left">
       <div class="hub__contentImageTop--text">
-        <h2>Unsere Philosophie</h2>
+        <h2>Unsere Gerichte</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -43,28 +43,28 @@
       <div class="hub__contentImageTop--image left">
         <picture>
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-7.jpg"
             media="(min-width: 1300px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-7.jpg"
             media="(min-width: 1024px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-7.jpg"
             media="(min-width: 768px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/image_teaser-7.jpg"
             media="(max-width: 768px)"
           />
-          <img src="~/assets/images/image_teaser-1.webp" alt="MDN" />
+          <img src="~/assets/images/image_teaser-7.jpg" alt="MDN" />
         </picture>
       </div>
     </div>
     <div class="hub__contentImageTop left">
       <div class="hub__contentImageTop--text">
-        <h2>Unsere Philosophie</h2>
+        <h2>Unser Reyclingsystem</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -76,28 +76,28 @@
       <div class="hub__contentImageTop--image left">
         <picture>
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/mainimage.jpg"
             media="(min-width: 1300px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/mainimage.jpg"
             media="(min-width: 1024px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/mainimage.jpg"
             media="(min-width: 768px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-1.webp"
+            srcset="~/assets/images/mainimage.jpg"
             media="(max-width: 768px)"
           />
-          <img src="~/assets/images/image_teaser-1.webp" alt="MDN" />
+          <img src="~/assets/images/mainimage.jpg" alt="MDN" />
         </picture>
       </div>
     </div>
     <div class="hub__contentImageTop left">
       <div class="hub__contentImageTop--text">
-        <h2>Unsere Philosophie</h2>
+        <h2>Unser Blog</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -109,22 +109,22 @@
       <div class="hub__contentImageTop--image left">
         <picture>
           <source
-            srcset="~/assets/images/image_teaser-4.webp"
+            srcset="~/assets/images/image_teaser-9.jpg"
             media="(min-width: 1300px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-4.webp"
+            srcset="~/assets/images/image_teaser-9.jpg"
             media="(min-width: 1024px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-4.webp"
+            srcset="~/assets/images/image_teaser-9.jpg"
             media="(min-width: 768px)"
           />
           <source
-            srcset="~/assets/images/image_teaser-4.webp"
+            srcset="~/assets/images/image_teaser-9.jpg"
             media="(max-width: 768px)"
           />
-          <img src="~/assets/images/image_teaser-4.webp" alt="MDN" />
+          <img src="~/assets/images/image_teaser-9.jpg" alt="MDN" />
         </picture>
       </div>
     </div>
@@ -148,7 +148,6 @@ export default {
 .hub__contentImageTop {
   position: relative;
   z-index: 0;
-  padding-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -187,6 +186,7 @@ export default {
     img {
       width: 100%;
       height: auto;
+      max-height:300px;
       @include desktop-small {
         width: 80%;
         height: auto;
@@ -204,7 +204,7 @@ export default {
       color: $color-white;
       text-align: center;
       position: absolute;
-      margin-top: 40%;
+      margin-top: 25%;
 
       p,
       span {
@@ -244,6 +244,7 @@ export default {
     img {
       width: 100%;
       height: auto;
+      max-height:300px;
       @include desktop-small {
         width: 80%;
         height: auto;

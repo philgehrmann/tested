@@ -14,7 +14,19 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      }
+      },{
+        name: 'theme-color', content: '#303030'
+      }, 
+      {
+        name: 'apple-mobile-web-app-capable', content: 'yes'
+      }, 
+      {
+        name: 'apple-mobile-web-app-status-bar-style', content: '#303030'
+      }, 
+      {
+        name: 'msapplication-navbutton-color', content: '#303030'
+      }, 
+      
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },

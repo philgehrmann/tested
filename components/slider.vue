@@ -20,22 +20,22 @@
     >
       <picture v-parallax="0.1">
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-7.jpg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-7.jpg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-7.jpg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-7.jpg"
           media="(max-width: 768px)"
         />
-        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
+        <img src="~/assets/images/image_teaser-7.jpg" alt="MDN" />
       </picture>
       <picture v-parallax="0.1">
         <source
@@ -58,42 +58,24 @@
       </picture>
       <picture v-parallax="0.1">
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-10.jpeg"
           media="(min-width: 1300px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-10.jpeg"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-10.jpeg"
           media="(min-width: 768px)"
         />
         <source
-          srcset="~/assets/images/mainimage.jpg"
+          srcset="~/assets/images/image_teaser-10.jpeg"
           media="(max-width: 768px)"
         />
-        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
+        <img src="~/assets/images/image_teaser-10.jpeg" alt="MDN" />
       </picture>
-      <picture v-parallax="0.1">
-        <source
-          srcset="~/assets/images/mainimage.jpg"
-          media="(min-width: 1300px)"
-        />
-        <source
-          srcset="~/assets/images/mainimage.jpg"
-          media="(min-width: 1024px)"
-        />
-        <source
-          srcset="~/assets/images/mainimage.jpg"
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="~/assets/images/mainimage.jpg"
-          media="(max-width: 768px)"
-        />
-        <img src="~/assets/images/mainimage.jpg" alt="MDN" />
-      </picture>
+
     </slick>
   </div>
 </template>
@@ -118,21 +100,26 @@ export default {
             breakpoint: 1300,
             settings: {
               slidesToShow: 1,
-              autplay: false
+              autplay: false,
+              fade: true
             }
           },
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 1,
-              autplay: false
+              autplay: true,
+              fade: true,
+              autoplaySpeed: 5000,
             }
           },
           {
             breakpoint: 768,
             settings: {
               slidesToShow: 1,
-              autplay: false
+              autplay: true,
+              fade: true,
+              autoplaySpeed: 5000,
             }
           }
         ]
