@@ -22,7 +22,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "jquery": "^3.4.1",
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.4.3",
     "stylelint-config-standard": "^19.0.0",
     "vue-instagram": "^3.0.0",
     "vue-parallax-js": "^0.2.3",
